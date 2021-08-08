@@ -1,0 +1,27 @@
+@import './variables';
+html{
+ box-sizing: border-box;   
+ scroll-behavior: smooth;
+ font-family: $regular;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    background-color: $claro;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,h2,h3,h4, p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+img{
+    max-width: 100%;
+}

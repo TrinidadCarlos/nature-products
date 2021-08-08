@@ -1,0 +1,29 @@
+.nosotros{
+    h2{
+        margin-bottom: 2rem;
+    }
+}
+.nosotros-detalles{
+    margin-top: 1rem;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: dense;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    img{
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .nosotros-texto{
+        text-align: center;
+
+        h3{
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        p{
+            padding: 0 .5rem;
+            line-height: 1.5;
+        }
+    }
+
+}

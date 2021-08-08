@@ -1,0 +1,210 @@
+// HEADER GENERAL
+.webp .header {
+    background: $verdeOscuro url('/build/img/hero.webp') no-repeat center/cover;
+}
+
+.no-webp .header {
+    background: $verdeOscuro url('/build/img/hero.jpg') no-repeat center/cover;
+}
+
+.header {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        min-height: inherit;
+        background-color: $oscuro;
+         opacity: .6;
+    }
+}
+
+
+// BARRA DE NAVEGACION
+.header-barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: $claro;
+    z-index: 100;
+    background-color: $oscuro;
+    box-shadow: 0 .1rem .2rem $claro;
+
+    @include phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .header-logo-titulo {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        @include phone {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 3rem;
+            filter: invert(1);
+        }
+    }
+
+    .menu-responsive {
+        display: flex;
+        justify-content: space-between;
+        width: 4rem;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        span {
+            display: block;
+            width: .8rem;
+            height: .8rem;
+            margin-bottom: .5rem;
+            border-radius: 50%;
+            background-color: $claro;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+
+
+    .header-navegacion {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 90%;
+        min-height: 100vh;
+        background-color: $oscuro;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            min-height: fit-content;
+            visibility: visible;
+            opacity: 1;
+            position: initial;
+            background-color: transparent;
+
+        }
+
+        & li:last-child {
+            width: fit-content;
+            margin: 2rem auto 0 auto;
+            font-size: 1.5rem;
+            border-bottom: .1rem solid $claro;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 1rem;
+            margin-top: 2rem;
+            color: $claro;
+            font-family: $cursiva;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            text-shadow: 0 .2rem 0 $oscuro;
+            font-weight: $bold;
+            letter-spacing: .1rem;
+            transition: all .3s ease-in-out;
+            border-bottom: .2rem solid transparent;
+
+            @include tablet {
+                margin-top: 0;
+                padding: 0 .5rem;
+            }
+
+            &:hover {
+                background-color: $verdeOscuro;
+                box-shadow: 0 .1rem .2rem $claro;
+
+                @include tablet {
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+            }
+        }
+
+    }
+
+    .mostrar-navegacion{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+// CONTENIDO DEL HEADER (PRE)
+.header-contenido {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: 7rem;
+
+    @include tablet{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .contenido {
+        padding: .5rem;
+        color: $claro;
+        border-radius: .3rem;
+        border: .2rem solid $verdeClaro;
+
+        @include tablet{
+            width: 40%;
+        }
+
+        img {
+            filter: invert(1);
+        }
+
+        h2{
+            margin-bottom: 1rem;
+        text-transform: capitalize;
+
+        }
+
+        p{
+            line-height: 1.6;
+            word-spacing: .2rem;
+            font-weight: $bold;
+        }
+    }
+}

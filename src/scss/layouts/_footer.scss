@@ -1,0 +1,40 @@
+.footer{
+    background-color: $oscuro;
+}
+
+.footer-contenido{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr));
+    color: $claro;
+    text-align: center;
+
+    img{
+        width: 2.5rem;
+        filter: invert(1);
+    }
+    
+}
+.redes-sociales{
+    width: 100%;
+    h2{
+        margin-bottom: 1rem;
+    }
+    img{
+        transition:transform .2s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+        
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+}
+.cierre-footer{
+    margin-top: 2rem;
+    h3{
+        margin: 1rem 0;
+    }
+}
+

@@ -1,0 +1,53 @@
+.contacto{
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    img{
+        width: 90%;
+        box-shadow: 1rem -1rem 0 $verdeClaro;
+    }
+
+    .formulario{
+        width: 100%;
+        h2{
+            margin: 2rem auto;
+        }
+    }
+}
+
+.campos{
+    position: relative;
+    label{
+        display: block;
+    }
+    input, textarea{
+        width: 100%;
+        padding: .5rem;
+        margin:1rem 0 ;
+        resize: none;
+        background-color: transparent;
+        border: none;
+        border-bottom:.1rem solid $verdeClaro;
+        border-radius: .3rem;
+        outline: none;
+        &:placeholder-shown{
+            color: $verde;
+        }
+    }
+    
+}
+
+.boton-form{
+    display: block;
+    padding: .5rem 2rem;
+    color: $verdeOscuro2;
+    border: .1rem solid $verdeOscuro;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color: $claro;
+        background-color: $verde;
+    }
+}
